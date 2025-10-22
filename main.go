@@ -18,11 +18,11 @@ func main() {
 
 	dataName := []string{"ari", "eka", "saputra", "jhon"}
 	var input string
-
 	fmt.Print("Masukkan nama: ")
-	fmt.Scan(&input)
+	fmt.Scan(&input) 
 
-	input = strings.ToLower(input)
+	newInput := &input
+	*newInput = strings.ToLower(*newInput)
 
-	lib.SearchPerson(dataName, input)
+	lib.SearchPerson(dataName, *newInput) 
 }
